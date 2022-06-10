@@ -1,0 +1,16 @@
+﻿@model HelloLayouts.Models.EmployeeDetailViewModel;
+
+<b>Employee Details</b>
+<div>@Model.Employees.EmployeeID</div>
+<div>@Model.Employees.EmployeeName</div>
+<div>@Model.Employees.EmployeeEmail</div>
+
+<hr/>
+<b>Employee Address</b>
+<div>@Model.EmployeeAddress.EmployeeAddressLine1</div>
+<div>@Model.EmployeeAddress.EmployeeCity</div>
+<div>@Model.EmployeeAddress.EmployeeState</div>
+
+<div>
+    @Html.Partial("_Advts")
+</div>

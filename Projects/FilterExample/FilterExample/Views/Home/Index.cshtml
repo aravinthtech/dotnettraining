@@ -1,0 +1,23 @@
+﻿
+    <div>
+        <label>First Name</label>
+        <input type="text" name="FirstName" id="FirstName" />
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="LastName" id="LastName" />
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="text" name="Email" id="Email" />
+    </div>
+    <div>
+        <button type="submit" onclick="insertEmployee()">Submit</button>
+    </div>
+
+@{ 
+    for(int i = 0; i < 5; i++)
+            {
+                <p>@i.ToString()</p>
+            }
+}

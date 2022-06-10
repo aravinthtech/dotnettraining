@@ -1,0 +1,30 @@
+﻿@using HelloLayouts.Models;
+
+@model RegistrationModel;
+
+<form action="/SignUp/Submit" method="post">
+
+    @Html.ValidationSummary()
+    
+    <div>
+        <label>First Name</label>     
+        @Html.ValidationMessageFor(m => m.FirstName)
+        <input type="text" name="FirstName" id="FirstName"/>
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="LastName" id="LastName"/>
+    </div>
+    <div>
+        <label>User Name</label>
+        <input type="text" id="UserName" name="UserName"/>
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" id="Password" name="Password"/>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+        
+    </div>
+</form>
