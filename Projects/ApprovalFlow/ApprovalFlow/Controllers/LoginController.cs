@@ -20,6 +20,8 @@ namespace ApprovalFlow.Controllers
         public ActionResult Submit(LoginModel loginModel)
         {
             UserProvider userProvider = new UserProvider();
+            HashingProvider hashingProvider = new HashingProvider();
+            loginModel.Password = hashingProvider.GetHashedText(loginModel.Password);
             User user= userProvider.Login(loginModel);
             if (user.Role == "admin")
                 //redirecting to Admin Home Page

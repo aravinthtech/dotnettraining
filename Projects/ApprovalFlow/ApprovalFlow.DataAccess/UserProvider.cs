@@ -26,5 +26,15 @@ namespace ApprovalFlow.DataAccess
                 return user;
             }
         }
+
+        public bool RegisterUser(User user)
+        {
+            using(var db=new ApprovalFlowEntities())
+            {
+                db.Users.Add(user);
+                db.SaveChanges();
+                return true;
+            }
+        }
     }
 }
